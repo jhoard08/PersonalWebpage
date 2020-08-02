@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Joi = require('joi');
 
-const Program = mongoose.model('program', new mongoose.Schema({
+const Project = mongoose.model('program', new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -17,13 +17,13 @@ const Program = mongoose.model('program', new mongoose.Schema({
     }
 }));
 
-function validateProgram(program){
+function validateProject(project) {
     const isValid = Joi.object({
         name: Joi.string().required().min(5).max(50),
         language: Joi.string().required()
-    })
-    return isValid.validate(program);
+    });
+    return isValid.validate(project);
 }
 
-module.exports.Program = Program;
-module.exports.validate = validateProgram;
+module.exports.Project = Project;
+module.exports.validate = validateProject;
