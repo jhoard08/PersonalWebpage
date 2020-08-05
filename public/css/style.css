@@ -1,9 +1,20 @@
 body{
   background-image: url('../images/homePage.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
 }
-div.header{
+.homeDiv{
   color: black;
   text-align: center;
   text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
 }
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%) translateY(-50%);
+}
+

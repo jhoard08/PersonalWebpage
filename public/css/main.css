@@ -1,0 +1,39 @@
+body .padtop0 {
+  padding-top: 0px;
+}
+
+body .padX0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.sec > .container {
+  padding-bottom: 60px;
+}
+
+.subTitle {
+  font-family: "Gravity-Regular";
+  letter-spacing: 10px;
+  padding-left: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 0px;
+}
+
+.titleMain{
+  font-family: "Gravity-Regular";
+  letter-spacing: 20px;
+}
+
+@media (max-width: 458) {
+  .titleMain {
+    letter-spacing: 10px;
+  }
+}
+
+@media (max-width: 369px) {
+  .titleMain {
+    font-size: 2em;
+    letter-spacing: 0px;
+  }
+}

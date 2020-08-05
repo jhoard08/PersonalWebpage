@@ -1,22 +1,85 @@
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
+body, html {
+  height: 100%;
+  margin: 0;
 }
 
-h1 {
-    text-align: center;
-    border: 3px solid green;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%
+.homeImg {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-h3 {
-    text-align: center;
-    border: 3px solid green;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%
+.homeDiv {
+  color: black;
+  text-align: center;
+  text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%) translateY(-50%);
+}
+
+.titleMain {
+  padding-bottom: 80px;
+}
+
+.rowBackSS {
+  background-image: url("/images/coding.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 240px;
+}
+
+.textCenter, .cenX {
+  text-align: center;
+}
+
+.temp .subTitle {
+  padding-bottom: 100px;
+}
+
+.temp .row {
+  padding: 30px;
+  border-radius: 5px;
+  border: 2px solid #101010;
+}
+
+.homeDiv .subTitle {
+  text-align: center;
+}
+
+.row:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+.row {
+  -webkit-transition: -webkit-transform .15s ease;
+  -moz-transition: -moz-transform .15s ease;
+  -o-transition: -o-transform .15s ease;
+  -ms-transition: -ms-transform .15s ease;
+  transition: transform .15s ease;
+  position: relative;
+}
+
+@media (max-height: 780px){
+  .titleMain {
+    padding-bottom: 10px;
+  }
+  .rowBackSS {
+    height: 160px;
+  }
+  .homeDiv .subTitle {
+    font-size: 1em;
+    padding-top: 10px;
+  }
 }

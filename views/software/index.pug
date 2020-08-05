@@ -2,9 +2,13 @@ doctype html
 html
   head
     link(rel='stylesheet', href='css/software/style.css')
-    title= 'Jacob Hoard'
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/main.css')
+    title= 'Jake Hoard'
   body
-    a(class='button', href='//localhost:3000/') Home
-    h1= 'Software Projects'
-    img(src="images/coding.jpg", alt="coding block")
-    h3= 'Java | C# | Javascript'
+    include ../head.pug
+    .homeImg.container-fluid
+      .homeDiv.center.container
+        h1.titleMain.cenX= "CODE REPOSITORY"
+        .row.rowBackSS
+        h3.subTitle= "JAVA | C# | WEB DESIGN"
