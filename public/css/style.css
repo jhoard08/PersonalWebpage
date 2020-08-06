@@ -5,10 +5,30 @@ body{
   background-position: center;
   height: 100%;
 }
+
+.homeImg {
+  background-image: url("../images/IMG_2130.jpg");
+  background-image: url("../images/IMG_2134.jpg");
+  background-image: url("../images/IMG_1691.jpg");
+  background-image: url("../images/IMG_1068.jpg");
+
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .homeDiv{
   color: black;
   text-align: center;
   text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+.homeSouth {
+  text-align: center;
+  position: absolute;
+  left: calc(50% - 54px);
+  top: calc(100% - 120px);
 }
 
 .center{
@@ -18,3 +38,92 @@ body{
   transform: translate(-50%) translateY(-50%);
 }
 
+.stealthLink, .stealthLink:focus, .stealthLink:hover {
+  color: white;
+  outline: 0;
+  text-decoration: none;
+  font-family: "Gravity-Regular";
+}
+
+.smoothScrollBtn {
+  color: white;
+  /* margin-top: -20px; */
+  position: relative;
+  border: none;
+  background: none;
+  font-size: 3em;
+}
+
+.smoothScrollBtn:focus {
+  outline: 0;
+}
+
+.circleImg {
+  border-radius: 50%;
+  height: 200px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  float: right;
+}
+
+.pad20 {
+  padding: 20px;
+  padding-bottom: 4px;
+}
+
+.rowPad {
+  padding: 40px;
+}
+
+.tilePadWide {
+  padding: 40px;
+}
+
+.tileDesc {
+  text-align: center;
+  padding: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: "Gravity-Regular";
+}
+
+.leftTitle {
+  text-align: left;
+  vertical-align: middle;
+  line-height: 50px;
+  font-family: "Gravity-Book";
+  font-size: 2em;
+  padding-left: 50px;
+  padding-bottom: 40px;
+}
+
+.softwareImg {
+  background-color: #282828;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.softwareDiv {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .softwareDiv, .electronicsDiv {
+      padding-top: 60px;
+      padding-bottom: 80px;
+  }
+  .aboutMe {
+      padding-top: 40px;
+      padding-bottom: 40px;
+  }
+  .tilePad {
+      padding: 10px;
+      padding-top: 80px;
+      padding-bottom: 80px;
+  }
+
+}

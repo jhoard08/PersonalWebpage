@@ -20,9 +20,51 @@ body .padX0 {
   margin-bottom: 0px;
 }
 
+.subPmin {
+  padding-left: 60px;
+  padding-right: 60px;
+  font-family: "Gravity-Regular";
+}
+
 .titleMain{
   font-family: "Gravity-Regular";
   letter-spacing: 20px;
+}
+
+.regTitle {
+  font-family: "Gravity-Regular";
+  letter-spacing: 5px;
+}
+
+.white {
+  color: white;
+}
+
+.btnLinks .col-md-4 {
+  text-align: center;
+}
+
+btnLinks .col-md-4 p {
+  padding-bottom: 10px;
+  font-family: "Gravity-Regular";
+}
+
+.centerLinks {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+
+}
+
+.centerLinks a {
+  color: gray;
+  font-family: "Gravity-Regular";
+  transition: 0.2s ease-in-out;
+}
+
+.centerLinks a:hover {
+  /* text-decoration: underline; */
+  color: white;
 }
 
 @media (max-width: 458) {

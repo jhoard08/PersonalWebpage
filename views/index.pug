@@ -4,8 +4,86 @@ html
     link(rel='stylesheet', href='css/bootstrap.min.css')
     link(rel='stylesheet', href='css/fonts.css')
     link(rel='stylesheet', href='css/main.css')
+    link(rel='stylesheet', href='css/spacing.css')
+    link(rel='stylesheet', href='css/nav.css')
     title= 'Jake Hoard'
   body
-  include head.pug
-  div.homeDiv.center
-    h1.titleMain= 'Jake Hoard'
+    include head.pug
+    .homeImg
+      .homeDiv.center
+        h1.titleMain Jake Hoard
+        h3 Cras tincidunt molestie nibh, eget malesuada mauris dapibus quis.
+      .homeSouth
+        h4
+          a.stealthLink.subPmin.padX0(href='#') Read More
+        button.smoothScrollBtn(type='button')
+          img(src='/images/Down-Arrow-White.png', width='30')
+    div.container-fluid.aboutMe
+      .container.aboutMe
+        .row.rowPad
+          .col-md-4
+            img.circleImg(src='/images/STP_0337.jpg')
+          .col-md-8
+            p.pad20
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              | Praesent tempor aliquet velit eu dictum. Duis tristique, enim quis mollis consequat, 
+              | ante odio commodo velit, non luctus diam ex eget odio. Cras tincidunt molestie nibh, 
+              | eget malesuada mauris dapibus quis. Praesent cursus risus dolor. Vestibulum placerat, 
+              | diam quis tincidunt accumsan, purus nisl tincidunt ex, id varius turpis nisl eget ante. 
+              | Nullam varius mauris sed ipsum porta cursus. Praesent finibus metus non purus auctor condimentum 
+              | sit amet porta sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere 
+              |cubilia curae;
+    .container-fluid.softwareImg
+      .container.softwareDiv
+        h1.leftTitle.subTitle.white(style='padding-top: 0px') SOFTWARE
+        .row
+          .col-md-6.tilePadWide.softTileBack.col1Pad
+            h3.white.regTitle.cenX JAVA
+            h5.tileDesc.subPmin.white
+              | Lorem ipsum dolor sit amet.
+            ul.centerLinks
+              li(style='display:inline-block;')
+                a(href='software/timelapse-auto-ramp')
+                  p#PSDPlug(style='border-width:0px') Lorem ipsum dolor sit amet.
+              li.brText
+                p |
+              li(style='display:inline-block;')
+                a(href='/software#top')
+                  p View all projects
+          .col-md-6.tilePadWide.softTileBack.col2Pad
+            h3.white.regTitle.cenX EMBEDDED
+            h5.tileDesc.subPmin.white
+              | Lorem ipsum dolor sit amet.
+            ul.centerLinks
+              li(style='display:inline-block;')
+                a(href='software/pathfinding')
+                  p#pathLink(style='border-width:0px') Lorem ipsum dolor sit amet.
+              li.brText
+                p |
+              li(style='display:inline-block;')
+                a(href='software#top')
+                  p View all projects
+        .row
+          .col-md-6.tilePadWide.softTileBack.col1Pad
+            h3.white.regTitle.cenX C#
+            h5.tileDesc.subPmin.white
+              | Lorem ipsum dolor sit amet.
+            ul.centerLinks
+              li(style='display:inline-block;')
+                a(href='electronics/air-conditioner-DIY')
+                  p(style='border-width:0px') Lorem ipsum dolor sit amet.
+              li.brText
+                p |
+              li(style='display:inline-block;')
+                a(href='electronics#top')
+                  p View all projects
+          .col-md-6.tilePadWide.softTileBack.col2Pad
+            h3.white.regTitle.cenX WEB
+            h5.tileDesc.subPmin.white
+              | Experience with HTML, CSS, Javascript and bootstrap
+              | to create this responsive website
+script(type='text/javascript', src='/scripts/nav.js')
+script(src='/includes/popper.min.js')
+script(src='/includes/jquery.min.js')
+script(src='/includes/bootstrap.min.js')
+script(type='text/javascript', src='/scripts/main.js')
