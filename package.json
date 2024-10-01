@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/jhoard08/PersonalWebpage#readme",
   "dependencies": {
-    "bootstrap": "^4.5.1",
+    "bootstrap": "^5.0.0",
     "express": "^4.20.0",
     "joi": "^17.1.1",
     "mongodb": "^3.6.10",
