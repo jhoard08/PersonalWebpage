@@ -5,6 +5,6 @@ Node js verison of my personal website. It's still in the early stages of develo
 - Install node js on your machine
 - cd to root directory, type "npm install" to get all the dependencies
 - type "node index.js" to start the server
-- Go to http://localhost:3000 
+- Go to http://localhost:3000  
 
 
