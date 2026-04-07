@@ -4,9 +4,7 @@ const mongoose = require('mongoose');
 const project = require('./routes/project');
 const home = require('./routes/index');
 const contact = require('./routes/contact');
-mongoose.set('useUnifiedTopology', true);
-
-mongoose.connect('mongodb://localhost/JakeHoard', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/JakeHoard')
     .then(() => console.log('Connected to db...'))
     .catch(err => console.error('Error connecting to db...'));
 

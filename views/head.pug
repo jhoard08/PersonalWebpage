@@ -1,11 +1,13 @@
-nav#global-nav.navbar.navbar-expand-lg.toggle-height
-      .container
-        a.navbar-brand.scrollN(href='/') Jake Hoard
-        button.navbar-toggler.custom-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-          span.navbar-toggler-icon.custom-toggler
-        #navbarSupportedContent.collapse.navbar-collapse
-          ul.navbar-nav.mr-auto
-            li
-              a.nav-link.scrollN(href='/projects') Software
-            li
-              a.nav-link.scrollN(href='/contact') Contact
+nav#global-nav.navbar.navbar-expand-lg.fixed-top
+  .container
+    a.navbar-brand(href='/') Jake Hoard
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a.nav-link(href='/') Home
+        li.nav-item
+          a.nav-link(href='/projects') Software
+        li.nav-item
+          a.nav-link(href='/contact') Contact

@@ -1,10 +1,39 @@
+doctype html
 html
   head
-    link(rel='stylesheet', href='css/style.css')
-    link(rel='stylesheet', href='css/bootstrap.min.css')
-    link(rel='stylesheet', href='css/main.css')
-    title= 'Jacob Hoard'
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/fonts.css')
+    link(rel='stylesheet', href='/css/site.css')
+    title Contact | Jake Hoard
   body
-  include ../head.pug
-  div.homeDiv.center
-    h1.titleMain= message
+    include ../head.pug
+
+    section.page-header
+      .container
+        h1.page-title Contact
+
+    section.contact-section
+      .container
+        .row.justify-content-center
+          .col-lg-8
+            .contact-card
+              h3 Get in Touch
+              p.contact-text
+                | Have a question or want to work together? Feel free to reach out.
+              .contact-links
+                a.contact-link(href='https://github.com/jhoard08', target='_blank', rel='noopener')
+                  span GitHub
+                  svg(xmlns='http://www.w3.org/2000/svg', width='16', height='16', viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                    line(x1='7', y1='17', x2='17', y2='7')
+                    polyline(points='7 7 17 7 17 17')
+
+    footer.site-footer
+      .container.text-center
+        p &copy; #{new Date().getFullYear()} Jake Hoard
+
+    script(src='/includes/jquery.min.js')
+    script(src='/includes/popper.min.js')
+    script(src='/includes/bootstrap.min.js')
+    script(src='/scripts/nav.js')

@@ -1,15 +1,40 @@
 doctype html
 html
   head
-    link(rel='stylesheet', href='css/software/style.css')
-    link(rel='stylesheet', href='css/bootstrap.min.css')
-    link(rel='stylesheet', href='css/main.css')
-    title= 'Jake Hoard'
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/fonts.css')
+    link(rel='stylesheet', href='/css/site.css')
+    title Software | Jake Hoard
   body
     include ../head.pug
-    .homeImg.container-fluid
-      .homeDiv.center.container
-        h1.titleMain.cenX= "CODE REPOSITORY"
-        .row.rowBackSS
-        h3.subTitle= "JAVA | C# | WEB DESIGN"
-      
+
+    section.page-header
+      .container
+        h1.page-title Software Projects
+
+    section.projects-section
+      .container
+        if message && message.length
+          .row
+            each project in message
+              .col-md-6.col-lg-4
+                .project-card
+                  .project-card-body
+                    h3.project-card-title= project.name
+                    span.project-badge= project.language
+                    if project.url
+                      a.project-link(href=project.url, target='_blank', rel='noopener') View Project &rarr;
+        else
+          .text-center.py-5
+            p.text-muted No projects found.
+
+    footer.site-footer
+      .container.text-center
+        p &copy; #{new Date().getFullYear()} Jake Hoard
+
+    script(src='/includes/jquery.min.js')
+    script(src='/includes/popper.min.js')
+    script(src='/includes/bootstrap.min.js')
+    script(src='/scripts/nav.js')

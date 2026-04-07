@@ -1,89 +1,75 @@
+doctype html
 html
   head
-    link(rel='stylesheet', href='css/style.css')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='css/bootstrap.min.css')
     link(rel='stylesheet', href='css/fonts.css')
-    link(rel='stylesheet', href='css/main.css')
-    link(rel='stylesheet', href='css/spacing.css')
-    link(rel='stylesheet', href='css/nav.css')
-    title= 'Jake Hoard'
+    link(rel='stylesheet', href='css/site.css')
+    title Jake Hoard
   body
     include head.pug
-    .homeImg
-      .homeDiv.center
-        h1.titleMain Jake Hoard
-        h3 Cras tincidunt molestie nibh, eget malesuada mauris dapibus quis.
-      .homeSouth
-        h4
-          a.stealthLink.subPmin.padX0(href='#') Read More
-        button.smoothScrollBtn(type='button')
-          img(src='/images/Down-Arrow-White.png', width='30')
-    div.container-fluid.aboutMe
-      .container.aboutMe
-        .row.rowPad
-          .col-md-4
-            img.circleImg(src='/images/STP_0337.jpg')
-          .col-md-8
-            p.pad20
-              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              | Praesent tempor aliquet velit eu dictum. Duis tristique, enim quis mollis consequat, 
-              | ante odio commodo velit, non luctus diam ex eget odio. Cras tincidunt molestie nibh, 
-              | eget malesuada mauris dapibus quis. Praesent cursus risus dolor. Vestibulum placerat, 
-              | diam quis tincidunt accumsan, purus nisl tincidunt ex, id varius turpis nisl eget ante. 
-              | Nullam varius mauris sed ipsum porta cursus. Praesent finibus metus non purus auctor condimentum 
-              | sit amet porta sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere 
-              |cubilia curae;
-    .container-fluid.softwareImg
-      .container.softwareDiv
-        h1.leftTitle.subTitle.white(style='padding-top: 0px') SOFTWARE
+
+    //- Hero Section
+    section.hero
+      .hero-overlay
+      .container.hero-content
+        h1.hero-title Jake Hoard
+        p.hero-subtitle Software Engineer
+        a.hero-scroll(href='#about')
+          svg(xmlns='http://www.w3.org/2000/svg', width='32', height='32', viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+            polyline(points='6 9 12 15 18 9')
+
+    //- About Section
+    section#about.about
+      .container
+        .row.align-items-center
+          .col-lg-4.text-center.mb-4.mb-lg-0
+            img.about-photo(src='/images/STP_0337.JPG', alt='Jake Hoard')
+          .col-lg-8
+            h2.section-heading About Me
+            p.about-text
+              | I'm a software engineer with experience across the full stack &mdash; from
+              | embedded systems and desktop applications to modern web development.
+              | I enjoy building clean, reliable software and am always looking for
+              | new challenges to sharpen my skills.
+
+    //- Software Section
+    section.software
+      .container
+        h2.section-heading.text-white Software
         .row
-          .col-md-6.tilePadWide.softTileBack.col1Pad
-            h3.white.regTitle.cenX JAVA
-            h5.tileDesc.subPmin.white
-              | Lorem ipsum dolor sit amet.
-            ul.centerLinks
-              li(style='display:inline-block;')
-                a(href='')
-                  p#PSDPlug(style='border-width:0px') Lorem ipsum dolor sit amet.
-              li.brText
-                p |
-              li(style='display:inline-block;')
-                a(href='/software#top')
-                  p View all projects
-          .col-md-6.tilePadWide.softTileBack.col2Pad
-            h3.white.regTitle.cenX EMBEDDED
-            h5.tileDesc.subPmin.white
-              | Lorem ipsum dolor sit amet.
-            ul.centerLinks
-              li(style='display:inline-block;')
-                a(href='')
-                  p#pathLink(style='border-width:0px') Lorem ipsum dolor sit amet.
-              li.brText
-                p |
-              li(style='display:inline-block;')
-                a(href='software#top')
-                  p View all projects
-        .row
-          .col-md-6.tilePadWide.softTileBack.col1Pad
-            h3.white.regTitle.cenX C#
-            h5.tileDesc.subPmin.white
-              | Lorem ipsum dolor sit amet.
-            ul.centerLinks
-              li(style='display:inline-block;')
-                a(href='')
-                  p(style='border-width:0px') Lorem ipsum dolor sit amet.
-              li.brText
-                p |
-              li(style='display:inline-block;')
-                a(href='electronics#top')
-                  p View all projects
-          .col-md-6.tilePadWide.softTileBack.col2Pad
-            h3.white.regTitle.cenX WEB
-            h5.tileDesc.subPmin.white
-              | Experience with HTML, CSS, Javascript and bootstrap
-              | to create this responsive website
-script(type='text/javascript', src='/scripts/nav.js')
-script(src='/includes/popper.min.js')
-script(src='/includes/jquery.min.js')
-script(src='/includes/bootstrap.min.js')
-script(type='text/javascript', src='/scripts/main.js')
+          .col-md-6
+            .project-card
+              .project-card-body
+                h3.project-card-title Java
+                p.project-card-desc Desktop and command-line applications built with Java.
+                a.project-link(href='/projects') View Projects &rarr;
+          .col-md-6
+            .project-card
+              .project-card-body
+                h3.project-card-title Embedded
+                p.project-card-desc Low-level firmware and hardware-interfacing projects.
+                a.project-link(href='/projects') View Projects &rarr;
+          .col-md-6
+            .project-card
+              .project-card-body
+                h3.project-card-title C#
+                p.project-card-desc Applications and tools built with .NET and C#.
+                a.project-link(href='/projects') View Projects &rarr;
+          .col-md-6
+            .project-card
+              .project-card-body
+                h3.project-card-title Web
+                p.project-card-desc Full-stack web applications using Node.js, Express, and modern frameworks.
+                a.project-link(href='/projects') View Projects &rarr;
+
+    //- Footer
+    footer.site-footer
+      .container.text-center
+        p &copy; #{new Date().getFullYear()} Jake Hoard
+
+    script(src='/includes/jquery.min.js')
+    script(src='/includes/popper.min.js')
+    script(src='/includes/bootstrap.min.js')
+    script(src='/scripts/nav.js')
